@@ -7,8 +7,6 @@
 			微信快捷登入
 		</u-button>
 		<p class="des">微信授权登入后可以享受拼单,低价购物服务</p>
-
-
 	</view>
 
 </template>

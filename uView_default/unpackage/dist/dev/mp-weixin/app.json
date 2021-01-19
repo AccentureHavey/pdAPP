@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/Login/index",
     "pages/main/index",
+    "pages/Login/index",
     "pages/center/index"
   ],
   "subPackages": [],
@@ -9,7 +9,7 @@
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uView",
     "navigationBarBackgroundColor": "#ffffff",
-    "backgroundColor": "#55aaff"
+    "backgroundColor": "#ffffff"
   },
   "tabBar": {
     "color": "#909399",
@@ -18,7 +18,7 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/main/index",
         "iconPath": "static/index.png",
         "selectedIconPath": "static/index-selected.png",
         "text": "首页"

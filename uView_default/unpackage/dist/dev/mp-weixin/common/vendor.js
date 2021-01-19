@@ -801,7 +801,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -7253,7 +7253,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7274,14 +7274,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7367,7 +7367,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -7805,7 +7805,7 @@ module.exports = g;
 /***/ }),
 /* 4 */
 /*!***********************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/pages.json ***!
+  !*** E:/pdAPP/pdAPP/uView_default/pages.json ***!
   \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -7948,7 +7948,7 @@ function normalizeComponent (
 /***/ }),
 /* 11 */
 /*!******************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/index.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/index.js ***!
   \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8099,7 +8099,7 @@ var install = function install(Vue) {
 /***/ }),
 /* 12 */
 /*!*****************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/mixin/mixin.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/mixin/mixin.js ***!
   \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8172,7 +8172,7 @@ var install = function install(Vue) {
 /***/ }),
 /* 13 */
 /*!*******************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/request/index.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/request/index.js ***!
   \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8352,7 +8352,7 @@ new Request();exports.default = _default;
 /***/ }),
 /* 14 */
 /*!************************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/deepMerge.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/deepMerge.js ***!
   \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8392,7 +8392,7 @@ deepMerge;exports.default = _default;
 /***/ }),
 /* 15 */
 /*!************************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/deepClone.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/deepClone.js ***!
   \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8425,7 +8425,7 @@ deepClone;exports.default = _default;
 /***/ }),
 /* 16 */
 /*!*******************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/test.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/test.js ***!
   \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8666,7 +8666,7 @@ function code(value) {var len = arguments.length > 1 && arguments[1] !== undefin
 /***/ }),
 /* 17 */
 /*!**************************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/queryParams.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/queryParams.js ***!
   \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8734,16 +8734,16 @@ queryParams;exports.default = _default;
 /***/ }),
 /* 18 */
 /*!********************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/route.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/route.js ***!
   \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 19));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;} /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * 路由跳转方法，该方法相对于直接使用uni.xxx的好处是使用更加简单快捷
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * 并且带有路由拦截功能
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */var
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              * 路由跳转方法，该方法相对于直接使用uni.xxx的好处是使用更加简单快捷
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              * 并且带有路由拦截功能
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              */var
 
 Router = /*#__PURE__*/function () {
   function Router() {_classCallCheck(this, Router);
@@ -9655,7 +9655,7 @@ if (hadRuntime) {
 /***/ }),
 /* 22 */
 /*!*************************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/timeFormat.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/timeFormat.js ***!
   \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -9716,7 +9716,7 @@ timeFormat;exports.default = _default;
 /***/ }),
 /* 23 */
 /*!***********************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/timeFrom.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/timeFrom.js ***!
   \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -9773,7 +9773,7 @@ timeFrom;exports.default = _default;
 /***/ }),
 /* 24 */
 /*!****************************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/colorGradient.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/colorGradient.js ***!
   \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -9916,7 +9916,7 @@ function colorToRgba(color) {var alpha = arguments.length > 1 && arguments[1] !=
 /***/ }),
 /* 25 */
 /*!*******************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/guid.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/guid.js ***!
   \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -9967,7 +9967,7 @@ guid;exports.default = _default;
 /***/ }),
 /* 26 */
 /*!********************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/color.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/color.js ***!
   \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10014,7 +10014,7 @@ color;exports.default = _default;
 /***/ }),
 /* 27 */
 /*!************************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/type2icon.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/type2icon.js ***!
   \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10059,7 +10059,7 @@ type2icon;exports.default = _default;
 /***/ }),
 /* 28 */
 /*!**************************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/randomArray.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/randomArray.js ***!
   \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10076,7 +10076,7 @@ randomArray;exports.default = _default;
 /***/ }),
 /* 29 */
 /*!**********************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/addUnit.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/addUnit.js ***!
   \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10094,7 +10094,7 @@ function addUnit() {var value = arguments.length > 0 && arguments[0] !== undefin
 /***/ }),
 /* 30 */
 /*!*********************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/random.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/random.js ***!
   \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10114,7 +10114,7 @@ random;exports.default = _default;
 /***/ }),
 /* 31 */
 /*!*******************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/trim.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/trim.js ***!
   \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10139,7 +10139,7 @@ trim;exports.default = _default;
 /***/ }),
 /* 32 */
 /*!********************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/toast.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/toast.js ***!
   \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10159,7 +10159,7 @@ toast;exports.default = _default;
 /***/ }),
 /* 33 */
 /*!************************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/getParent.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/getParent.js ***!
   \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10216,7 +10216,7 @@ function getParent(name, keys) {
 /***/ }),
 /* 34 */
 /*!**********************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/$parent.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/$parent.js ***!
   \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10244,7 +10244,7 @@ function $parent() {var name = arguments.length > 0 && arguments[0] !== undefine
 /***/ }),
 /* 35 */
 /*!******************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/sys.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/sys.js ***!
   \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10262,7 +10262,7 @@ function sys() {
 /***/ }),
 /* 36 */
 /*!***********************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/debounce.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/debounce.js ***!
   \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10301,7 +10301,7 @@ debounce;exports.default = _default;
 /***/ }),
 /* 37 */
 /*!***********************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/throttle.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/throttle.js ***!
   \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10343,7 +10343,7 @@ throttle;exports.default = _default;
 /***/ }),
 /* 38 */
 /*!*******************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/config/config.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/config/config.js ***!
   \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10366,7 +10366,7 @@ var version = '1.8.3';var _default =
 /***/ }),
 /* 39 */
 /*!*******************************************************************!*\
-  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/config/zIndex.js ***!
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/config/zIndex.js ***!
   \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10391,6 +10391,102 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   topTips: 975,
   sticky: 970,
   indexListSticky: 965 };exports.default = _default;
+
+/***/ }),
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */
+/*!******************************************************************!*\
+  !*** E:/pdAPP/pdAPP/uView_default/uview-ui/libs/util/emitter.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; /**
+                                                                                                      * 递归使用 call 方式this指向
+                                                                                                      * @param componentName // 需要找的组件的名称
+                                                                                                      * @param eventName // 事件名称
+                                                                                                      * @param params // 需要传递的参数
+                                                                                                      */
+function _broadcast(componentName, eventName, params) {
+  // 循环子节点找到名称一样的子节点 否则 递归 当前子节点
+  this.$children.map(function (child) {
+    if (componentName === child.$options.name) {
+      child.$emit.apply(child, [eventName].concat(params));
+    } else {
+      _broadcast.apply(child, [componentName, eventName].concat(params));
+    }
+  });
+}var _default =
+{
+  methods: {
+    /**
+              * 派发 (向上查找) (一个)
+              * @param componentName // 需要找的组件的名称
+              * @param eventName // 事件名称
+              * @param params // 需要传递的参数
+              */
+    dispatch: function dispatch(componentName, eventName, params) {
+      var parent = this.$parent || this.$root; //$parent 找到最近的父节点 $root 根节点
+      var name = parent.$options.name; // 获取当前组件实例的name
+      // 如果当前有节点 && 当前没名称 且 当前名称等于需要传进来的名称的时候就去查找当前的节点
+      // 循环出当前名称的一样的组件实例
+      while (parent && (!name || name !== componentName)) {
+        parent = parent.$parent;
+        if (parent) {
+          name = parent.$options.name;
+        }
+      }
+      // 有节点表示当前找到了name一样的实例
+      if (parent) {
+        parent.$emit.apply(parent, [eventName].concat(params));
+      }
+    },
+    /**
+        * 广播 (向下查找) (广播多个)
+        * @param componentName // 需要找的组件的名称
+        * @param eventName // 事件名称
+        * @param params // 需要传递的参数
+        */
+    broadcast: function broadcast(componentName, eventName, params) {
+      _broadcast.call(this, componentName, eventName, params);
+    } } };exports.default = _default;
 
 /***/ })
 ]]);
