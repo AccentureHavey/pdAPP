@@ -1,14 +1,15 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/Login/index",
+    "pages/main/index",
     "pages/center/index"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uView",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#55aaff"
   },
   "tabBar": {
     "color": "#909399",
@@ -23,6 +24,12 @@
         "text": "首页"
       },
       {
+        "pagePath": "pages/Login/index",
+        "iconPath": "static/center.png",
+        "selectedIconPath": "static/center-selected.png",
+        "text": "发布"
+      },
+      {
         "pagePath": "pages/center/index",
         "iconPath": "static/center.png",
         "selectedIconPath": "static/center-selected.png",
@@ -30,6 +37,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

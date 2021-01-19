@@ -3,10 +3,16 @@
 		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
 	},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	{
+		"path": "pages/Login/index",
+		"style": {
+			"navigationBarTitleText": "登入"			 
+		}
+	},
 		{
-			"path": "pages/index/index",
+			"path": "pages/main/index",
 			"style": {
-				"navigationBarTitleText": "uView-index"
+				"navigationBarTitleText": "首页"
 			}
 		},
 		{
@@ -19,8 +25,8 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uView",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#55aaff"
 	},
 	"tabBar": {
 	    "color": "#909399",
@@ -33,6 +39,12 @@
 	        "selectedIconPath": "static/index-selected.png",
 	        "text": "首页"
 	    }, {
+	        "pagePath": "pages/Login/index",
+	        "iconPath": "static/center.png",
+	        "selectedIconPath": "static/center-selected.png",
+	        "text": "发布"
+	    },
+		{
 	        "pagePath": "pages/center/index",
 	        "iconPath": "static/center.png",
 	        "selectedIconPath": "static/center-selected.png",

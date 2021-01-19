@@ -801,7 +801,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -7253,7 +7253,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7274,14 +7274,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7367,7 +7367,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"uView-demo","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -7804,9 +7804,9 @@ module.exports = g;
 
 /***/ }),
 /* 4 */
-/*!************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/pages.json ***!
-  \************************************************************************/
+/*!***********************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/pages.json ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -7947,9 +7947,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 11 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/index.js ***!
-  \*******************************************************************************/
+/*!******************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/index.js ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8098,9 +8098,9 @@ var install = function install(Vue) {
 
 /***/ }),
 /* 12 */
-/*!******************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/mixin/mixin.js ***!
-  \******************************************************************************************/
+/*!*****************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/mixin/mixin.js ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8171,9 +8171,9 @@ var install = function install(Vue) {
 
 /***/ }),
 /* 13 */
-/*!********************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/request/index.js ***!
-  \********************************************************************************************/
+/*!*******************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/request/index.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8351,9 +8351,9 @@ new Request();exports.default = _default;
 
 /***/ }),
 /* 14 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/deepMerge.js ***!
-  \*************************************************************************************************/
+/*!************************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/deepMerge.js ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8391,9 +8391,9 @@ deepMerge;exports.default = _default;
 
 /***/ }),
 /* 15 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/deepClone.js ***!
-  \*************************************************************************************************/
+/*!************************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/deepClone.js ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8424,9 +8424,9 @@ deepClone;exports.default = _default;
 
 /***/ }),
 /* 16 */
-/*!********************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/test.js ***!
-  \********************************************************************************************/
+/*!*******************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/test.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8665,9 +8665,9 @@ function code(value) {var len = arguments.length > 1 && arguments[1] !== undefin
 
 /***/ }),
 /* 17 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/queryParams.js ***!
-  \***************************************************************************************************/
+/*!**************************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/queryParams.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8733,9 +8733,9 @@ queryParams;exports.default = _default;
 
 /***/ }),
 /* 18 */
-/*!*********************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/route.js ***!
-  \*********************************************************************************************/
+/*!********************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/route.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9654,9 +9654,9 @@ if (hadRuntime) {
 
 /***/ }),
 /* 22 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/timeFormat.js ***!
-  \**************************************************************************************************/
+/*!*************************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/timeFormat.js ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9715,9 +9715,9 @@ timeFormat;exports.default = _default;
 
 /***/ }),
 /* 23 */
-/*!************************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/timeFrom.js ***!
-  \************************************************************************************************/
+/*!***********************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/timeFrom.js ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9772,9 +9772,9 @@ timeFrom;exports.default = _default;
 
 /***/ }),
 /* 24 */
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/colorGradient.js ***!
-  \*****************************************************************************************************/
+/*!****************************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/colorGradient.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9915,9 +9915,9 @@ function colorToRgba(color) {var alpha = arguments.length > 1 && arguments[1] !=
 
 /***/ }),
 /* 25 */
-/*!********************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/guid.js ***!
-  \********************************************************************************************/
+/*!*******************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/guid.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9966,9 +9966,9 @@ guid;exports.default = _default;
 
 /***/ }),
 /* 26 */
-/*!*********************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/color.js ***!
-  \*********************************************************************************************/
+/*!********************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/color.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10013,9 +10013,9 @@ color;exports.default = _default;
 
 /***/ }),
 /* 27 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/type2icon.js ***!
-  \*************************************************************************************************/
+/*!************************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/type2icon.js ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10058,9 +10058,9 @@ type2icon;exports.default = _default;
 
 /***/ }),
 /* 28 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/randomArray.js ***!
-  \***************************************************************************************************/
+/*!**************************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/randomArray.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10075,9 +10075,9 @@ randomArray;exports.default = _default;
 
 /***/ }),
 /* 29 */
-/*!***********************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/addUnit.js ***!
-  \***********************************************************************************************/
+/*!**********************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/addUnit.js ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10093,9 +10093,9 @@ function addUnit() {var value = arguments.length > 0 && arguments[0] !== undefin
 
 /***/ }),
 /* 30 */
-/*!**********************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/random.js ***!
-  \**********************************************************************************************/
+/*!*********************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/random.js ***!
+  \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10113,9 +10113,9 @@ random;exports.default = _default;
 
 /***/ }),
 /* 31 */
-/*!********************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/trim.js ***!
-  \********************************************************************************************/
+/*!*******************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/trim.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10138,9 +10138,9 @@ trim;exports.default = _default;
 
 /***/ }),
 /* 32 */
-/*!*********************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/toast.js ***!
-  \*********************************************************************************************/
+/*!********************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/toast.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10158,9 +10158,9 @@ toast;exports.default = _default;
 
 /***/ }),
 /* 33 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/getParent.js ***!
-  \*************************************************************************************************/
+/*!************************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/getParent.js ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10215,9 +10215,9 @@ function getParent(name, keys) {
 
 /***/ }),
 /* 34 */
-/*!***********************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/$parent.js ***!
-  \***********************************************************************************************/
+/*!**********************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/$parent.js ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10243,9 +10243,9 @@ function $parent() {var name = arguments.length > 0 && arguments[0] !== undefine
 
 /***/ }),
 /* 35 */
-/*!*******************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/sys.js ***!
-  \*******************************************************************************************/
+/*!******************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/sys.js ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10261,9 +10261,9 @@ function sys() {
 
 /***/ }),
 /* 36 */
-/*!************************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/debounce.js ***!
-  \************************************************************************************************/
+/*!***********************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/debounce.js ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10300,9 +10300,9 @@ debounce;exports.default = _default;
 
 /***/ }),
 /* 37 */
-/*!************************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/function/throttle.js ***!
-  \************************************************************************************************/
+/*!***********************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/function/throttle.js ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10342,9 +10342,9 @@ throttle;exports.default = _default;
 
 /***/ }),
 /* 38 */
-/*!********************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/config/config.js ***!
-  \********************************************************************************************/
+/*!*******************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/config/config.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10365,9 +10365,9 @@ var version = '1.8.3';var _default =
 
 /***/ }),
 /* 39 */
-/*!********************************************************************************************!*\
-  !*** C:/Users/181001.JVI/Downloads/uView-cli/uView_default/uview-ui/libs/config/zIndex.js ***!
-  \********************************************************************************************/
+/*!*******************************************************************!*\
+  !*** F:/pdAPP/pdAPP/uView_default/uview-ui/libs/config/zIndex.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

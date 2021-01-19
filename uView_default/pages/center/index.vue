@@ -3,7 +3,7 @@
 		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
 			<text class="title">
-				uView - 多平台快速开发的UI框架
+				uView - 多平台快速开发的UI框架s
 			</text>
 		</view>
 		<view class="link-demo">
