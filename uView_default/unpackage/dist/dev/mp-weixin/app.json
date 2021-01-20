@@ -1,8 +1,11 @@
 {
   "pages": [
-    "pages/main/index",
+    "pages/personal/index",
     "pages/Login/index",
-    "pages/center/index"
+    "pages/main/index",
+    "pages/Order/index",
+    "pages/personal/service",
+    "pages/publish/index"
   ],
   "subPackages": [],
   "window": {
@@ -24,13 +27,13 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/Login/index",
+        "pagePath": "pages/publish/index",
         "iconPath": "static/center.png",
         "selectedIconPath": "static/center-selected.png",
         "text": "发布"
       },
       {
-        "pagePath": "pages/center/index",
+        "pagePath": "pages/personal/index",
         "iconPath": "static/center.png",
         "selectedIconPath": "static/center-selected.png",
         "text": "我"

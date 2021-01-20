@@ -13,17 +13,26 @@
 
 
 <script>
-	export default {
-		data() {
-			return {
-			}
-		},
-		methods: {
+import {LoginApi} from '../../api/login.js'
+let LoginService = new LoginApi();
+export default {
+  data() 
+  {
+    return {
+		LoginForm:{
+			code:'',
+			encryptedData:'',
+			iv:''
+		}
 
-			loginClick() {
 
-wx.getSetting({
-  success(res) {
+	}		 
+  },
+  methods: {
+   loginClick() {
+   var that = this
+   wx.getSetting({
+   success(res) {
     if (res.authSetting['scope.userInfo']) {
       wx.authorize({
         scope: 'scope.userInfo',
@@ -31,31 +40,25 @@ wx.getSetting({
           wx.getUserInfo({
             success: function(res) 
             {
-                uni.setStorageSync('UserInfo', res);
-                uni.request({
-                url: 'https://www.jverp.com/auth/login', //仅为示例，并非真实接口地址。
-                method:'POST',
-                data: {
-                    UserName: 'admin',
-                    Password: '123456',
-                    AccountName:'342',
-                    Code:'123',
-                    Language:''
-                },
-                head: {
-                'content-type':'application/json'
-                },
-                success: (res) => {
-                    console.log("request success!");
-                    console.log(res.data);
-                    uni.getStorage({
-                        key: 'UserInfo',
-                        success: function (res) {
-                            console.log('usinfo',res.data);
-                        }
-                    });
-                }
-                });
+				that.LoginForm.encryptedData = res.encryptedData,
+				that.LoginForm.iv = res.iv,
+				wx.login({
+					success (res) {
+						if(res.code) {
+							that.LoginForm.code = res.code
+							LoginService.Login(that.LoginForm).then(res => {
+					          uni.setStorageSync('UserInfo', {
+								  time:Date.now(),
+								  data:res.ResultData.User,
+								  token:res.ResultData.token
+							  });
+					          uni.switchTab({
+						        url:'../main/index'
+					        })
+				            })
+						}
+					}
+				})
           console.log(res)
             }
         })
@@ -64,17 +67,7 @@ wx.getSetting({
     }
   }
 })
-
-				// wx.requestSubscribeMessage({
-				// 	tmplIds: ['C5LJWaiGWqXTIgXK_D7333xJlqqu3xVHSzskxtJkCaM', 'jkBIEgd9_73LL_oTzl9Hqp7ZeyJjDvg1vzX7aHibfnU'], // 此处可填写多个模板 ID，但低版本微信不兼容只能授权一个
-				// 	success(res) {
-				// 		console.log('已授权接收订阅消息')
-				// 	},
-				// 	fail(res) {
-				// 		console.log(res)
-				// 	}
-				// })
-			}
+		  }
 		}
 	}
 </script>

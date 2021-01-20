@@ -4,24 +4,43 @@
 	},
 	"pages": [
 		{
+			"path": "pages/personal/index",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"navigationBarBackgroundColor": "#d93025"
+			}
+		},
+		{
+			"path": "pages/Login/index",
+			"style": {
+				"navigationBarTitleText": "登入"			 
+			}
+		},
+		{
 			"path": "pages/main/index",
 			"style": {
 				"navigationBarTitleText": "首页",
-				"navigationBarBackgroundColor": "#d93025"
-				
+				"navigationBarBackgroundColor": "#d93025"				
 			}
 		},
-	{
-		"path": "pages/Login/index",
-		"style": {
-			"navigationBarTitleText": "登入"			 
-		}
-	},
-
 		{
-			"path": "pages/center/index",
+			"path": "pages/Order/index",
 			"style": {
-				"navigationBarTitleText": "uView-center"
+				"navigationBarTitleText": "拼单详情",
+				"navigationBarBackgroundColor": "#d93025"				
+			}
+		},
+		{
+			"path": "pages/personal/service",
+			"style": {
+				"navigationBarTitleText": "建议中心",
+				"navigationBarBackgroundColor": "#d93025"				
+			}
+		},
+		{
+			"path": "pages/publish/index",
+			"style": {
+				"navigationBarTitleText": "发布"
 			}
 		}
 	],
@@ -42,13 +61,13 @@
 	        "selectedIconPath": "static/index-selected.png",
 	        "text": "首页"
 	    }, {
-	        "pagePath": "pages/Login/index",
+	        "pagePath": "pages/publish/index",
 	        "iconPath": "static/center.png",
 	        "selectedIconPath": "static/center-selected.png",
 	        "text": "发布"
 	    },
 		{
-	        "pagePath": "pages/center/index",
+	        "pagePath": "pages/personal/index",
 	        "iconPath": "static/center.png",
 	        "selectedIconPath": "static/center-selected.png",
 	        "text": "我"
