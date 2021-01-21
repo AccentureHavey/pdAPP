@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "中心",
-  "navigationBarBackgroundColor": "#d93025",
-  "usingComponents": {
-    "u-link": "/uview-ui/components/u-link/u-link"
-  }
-}

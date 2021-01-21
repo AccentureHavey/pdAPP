@@ -1,9 +1,12 @@
 {
   "pages": [
+    "pages/Order/OrderList",
     "pages/personal/index",
-    "pages/Login/index",
+    "pages/Order/acceptOrder",
     "pages/main/index",
+    "pages/Order/joinOrder",
     "pages/Order/index",
+    "pages/Login/index",
     "pages/personal/service",
     "pages/publish/index"
   ],

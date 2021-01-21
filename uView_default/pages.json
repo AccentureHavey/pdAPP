@@ -4,6 +4,13 @@
 	},
 	"pages": [
 		{
+			"path": "pages/Order/OrderList",
+			"style": {
+				"navigationBarTitleText": "拼单中心",
+				"navigationBarBackgroundColor": "#d93025"
+			}
+		},
+		{
 			"path": "pages/personal/index",
 			"style": {
 				"navigationBarTitleText": "个人中心",
@@ -11,9 +18,10 @@
 			}
 		},
 		{
-			"path": "pages/Login/index",
+			"path": "pages/Order/acceptOrder",
 			"style": {
-				"navigationBarTitleText": "登入"			 
+				"navigationBarTitleText": "拼单请求",
+				"navigationBarBackgroundColor": "#d93025"
 			}
 		},
 		{
@@ -24,10 +32,23 @@
 			}
 		},
 		{
+			"path": "pages/Order/joinOrder",
+			"style": {
+				"navigationBarTitleText": "参与拼单",
+				"navigationBarBackgroundColor": "#d93025"				
+			}
+		},
+		{
 			"path": "pages/Order/index",
 			"style": {
 				"navigationBarTitleText": "拼单详情",
 				"navigationBarBackgroundColor": "#d93025"				
+			}
+		},
+		{
+			"path": "pages/Login/index",
+			"style": {
+				"navigationBarTitleText": "登入"			 
 			}
 		},
 		{

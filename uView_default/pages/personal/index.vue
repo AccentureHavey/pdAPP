@@ -28,7 +28,7 @@
         <u-line color="blue" class="line"/>
             <view class="record">
                 <!-- 历史拼单 -->
-            <u-card title="阿迪达斯满4件5折求拼" sub-title="30分钟前"> 
+            <u-card title="阿迪达斯满4件5折求拼" sub-title="30分钟前" @click="detailClick"> 
                 <view class="" slot="body">
                     <p class="cardtext">等待时间：20分钟</p>
                     <u-button class="cardbutton" size="mini" type="error">等待拼单</u-button>
@@ -63,6 +63,13 @@ export default {
                 }
             ],
                                     
+        }
+    },
+    methods:{
+        detailClick(){
+             uni.navigateTo({
+              url: '../Order/index'
+            });
         }
     }
 }

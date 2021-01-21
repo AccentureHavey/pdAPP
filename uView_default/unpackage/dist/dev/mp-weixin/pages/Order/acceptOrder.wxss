@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.banner {
+  height: 300rpx;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrap {
+  margin-top: -180rpx;
+  margin-left: 5%;
+  width: 90%;
+}
+.joinButton {
+  position: absolute;
+  margin-top: 100rpx;
+  margin-left: 35%;
+}
+.notice {
+  padding: 20rpx;
+  margin-left: 15%;
+}
+.okButton {
+  position: absolute;
+  margin-left: 20%;
+  padding: 30rpx;
+}
+.phoneNumber {
+  margin-left: 35%;
+  color: blue;
+  font-weight: bold;
+}
+

@@ -8,7 +8,7 @@
 
 <view class="shop_list">
    	<u-grid :col="5" :border="false">
-		<u-grid-item>			
+		<u-grid-item @click="detail">			
             <image class="shopItem" src="/static/adi.png"></image>
 			<view class="grid-text">阿迪达斯</view>
 		</u-grid-item>
@@ -59,7 +59,7 @@
             <u-card :title="title" :sub-title="subTitle"> 
                 <view class="" slot="body">
                     <p class="cardtext">等待时间：20分钟</p>
-                    <u-button class="cardbutton" size="mini" type="error">立即拼单</u-button>
+                    <u-button class="cardbutton" size="mini" type="error" @click="JoinOrder">立即拼单</u-button>
                 </view>
             </u-card>
              <u-card :title="title" :sub-title="subTitle"> 
@@ -105,6 +105,13 @@ export default {
             title: '阿迪达斯4件5折求拼,差一件',
 			subTitle: '10分钟前'
 
+        }
+    },
+    methods:{
+        JoinOrder(){
+            uni.navigateTo({
+              url: '../Order/joinOrder'
+            });
         }
     }
 }
