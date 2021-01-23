@@ -4,6 +4,7 @@
     <view class="wrap">
    <u-swiper :list="list"></u-swiper>
 </view>
+<view class="formbord">
     <u-form :model="form" ref="uForm">
         <u-form-item label="店铺"><u-input v-model="form.shopName" /></u-form-item>
         <u-form-item label="优惠类型" label-width="150rpx">
@@ -15,6 +16,7 @@
         <u-form-item label="有效时间" label-width="150rpx"><u-input v-model="form.vaildTime" :disabled='true'/></u-form-item>
         <u-form-item label="状态" label-width="150rpx"><u-button type='warning' size='mini'>等待拼单中</u-button></u-form-item>
     </u-form>
+</view>
 <u-button type='error' size='medium' class="cancleButton">取消拼单</u-button>
 
     
@@ -75,6 +77,9 @@ export default {
 </script>
 
 <style lang="scss">
+    .formbord {
+        padding: 50rpx
+    }
     .banner {
 		height: 300rpx;
         width: 100%;

@@ -4,6 +4,20 @@
 	},
 	"pages": [
 		{
+			"path": "pages/main/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationBarBackgroundColor": "#d93025"				
+			}
+		},
+		{
+			"path": "pages/Activity/index",
+			"style": {
+				"navigationBarTitleText": "活动",
+				"navigationBarBackgroundColor": "#d93025"				
+			}
+		},
+		{
 			"path": "pages/Order/OrderList",
 			"style": {
 				"navigationBarTitleText": "拼单中心",
@@ -22,13 +36,6 @@
 			"style": {
 				"navigationBarTitleText": "拼单请求",
 				"navigationBarBackgroundColor": "#d93025"
-			}
-		},
-		{
-			"path": "pages/main/index",
-			"style": {
-				"navigationBarTitleText": "首页",
-				"navigationBarBackgroundColor": "#d93025"				
 			}
 		},
 		{
@@ -61,7 +68,8 @@
 		{
 			"path": "pages/publish/index",
 			"style": {
-				"navigationBarTitleText": "发布"
+				"navigationBarTitleText": "发布",
+				"navigationBarBackgroundColor": "#d93025"
 			}
 		}
 	],
@@ -78,19 +86,25 @@
 	    "backgroundColor": "#ffffff",
 	    "list": [{
 	        "pagePath": "pages/main/index",
-	        "iconPath": "static/index.png",
-	        "selectedIconPath": "static/index-selected.png",
+	        "iconPath": "static/home.png",
+	        "selectedIconPath": "static/home-selected.png",
 	        "text": "首页"
 	    }, {
 	        "pagePath": "pages/publish/index",
-	        "iconPath": "static/center.png",
-	        "selectedIconPath": "static/center-selected.png",
+	        "iconPath": "static/publish.png",
+	        "selectedIconPath": "static/publish-selected.png",
 	        "text": "发布"
+		},
+		{
+	        "pagePath": "pages/Activity/index",
+	        "iconPath": "static/hot.png",
+	        "selectedIconPath": "static/hot-selected.png",
+	        "text": "活动"
 	    },
 		{
 	        "pagePath": "pages/personal/index",
-	        "iconPath": "static/center.png",
-	        "selectedIconPath": "static/center-selected.png",
+	        "iconPath": "static/me.png",
+	        "selectedIconPath": "static/me-selected.png",
 	        "text": "我"
 	    }]
 	}

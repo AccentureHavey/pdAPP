@@ -1,7 +1,7 @@
 <template>
 <view>
    <image class="banner" src="/static/banner.png"></image>
-   <u-input class="inputstyle"  width="200rpx" height="40rpx" placeholder-style="color: #ffffff" border="true" v-model="shop" placeholder="搜索店铺"/>   
+   <u-search placeholder="搜索店铺" @search="search" height="20" type="select" color="#FFFFFF" search-icon-color="#FFFFFF" placeholder-color="#FFFFFF" bg-color="#FFFFFF" border-color="#FFFFFF" v-model="shop" class="searchShop"></u-search>
 <view class="wrap">
    <u-swiper :list="list"></u-swiper>
 </view>
@@ -102,6 +102,7 @@ export default {
                 '158**** 成功拼单 4件5折',
 					'158**** 成功拼单 满1000减500'
             ],
+            Shopshow:false,
             title: '阿迪达斯4件5折求拼,差一件',
 			subTitle: '10分钟前'
 
@@ -112,7 +113,24 @@ export default {
             uni.navigateTo({
               url: '../Order/joinOrder'
             });
+        },
+        detail(){
+            uni.navigateTo({
+              url: '../Order/OrderList'
+            });
+        },
+        confirm(){
+            uni.navigateTo({
+              url: '../Order/OrderList'
+            }); 
+        },
+        search(value){
+            console.log(value)
+                        uni.navigateTo({
+              url: '../Order/index'
+            }); 
         }
+
     }
 }
 </script>
@@ -149,5 +167,11 @@ export default {
     .cardbutton {
         float: right;
         margin-top: -40rpx;
+    }
+    .searchShop {
+         float: left;
+         margin-top: -280rpx;
+         width:80%;
+         margin-left: 10%;
     }
 </style>

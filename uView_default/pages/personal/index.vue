@@ -24,8 +24,9 @@
 			<view class="grid-text">完成拼单</view>
 		</u-grid-item>
 	</u-grid>
+            <u-line color="grey" class="line"/>
         </view>
-        <u-line color="blue" class="line"/>
+
             <view class="record">
                 <!-- 历史拼单 -->
             <u-card title="阿迪达斯满4件5折求拼" sub-title="30分钟前" @click="detailClick"> 
@@ -121,6 +122,7 @@ export default {
         margin-top: -40rpx;
     }
     .line {
+        margin-top: -130rpx;
        height: 3rpx;
     }
 </style>
